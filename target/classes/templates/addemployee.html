@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--css-->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+
+    <!--js-->
+    <script th:src="@{/js/min.js}"></script>
+
+</head>
+<body>
+
+<h1>Create Employees</h1>
+
+<form action="#" th:action="@{/addemployee}" th:object="${employee}" method="post" class="formEm">
+    <table border="1">
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" th:field="${employee.id}" /></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="${employee.name}" /></td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><input type="text" th:field="${employee.salary}" /></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+
+</html>
